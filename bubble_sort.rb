@@ -1,4 +1,6 @@
 =begin
+-check if array is empty
+
 -define a bubble sort method and pass it an array of integers
 -iterate through the array comparing the elements
 - create a temporal file in case of swapping
@@ -7,19 +9,49 @@
 =end
 
 def bubble_sort_by(arr)
-    print arr
-arr.each_with_index { |arr0, arr1| 
-    temp = 0
-    if arr[0] <= arr[1]
-  return arr
-    elsif arr[0] > arr[1]
-     temp =   arr[0] 
-     arr[1] = arr[0] 
-        temp = arr[1]
+    arr_length = arr.size
+    i = 0
+    if arr_length <= 1
         return arr
+    elsif (arr_length > 1) && (arr[i] <= arr[i+1])
+        sorted_arr = []
+      
+        # arr[i] = arr[0]
+        temp = 0
+
+       
+           temp =  arr[i]
+            arr[i+1] = arr[i]
+            temp = arr[i+1]
+            sorted_arr.push(temp)
+            i += 1
+        
+        return sorted_arr
+
     end
+end
+
+
+   puts  bubble_sort_by([3, 7, 4, 5, 9])
+
+
+
+
+
+
+#     print arr
+# arr.each_with_index { |arr0, arr1| 
+  
+#     if arr[0] <= arr[1]
+#   return arr
+#     elsif arr[0] > arr[1]
+#      temp =   arr[0] 
+#      arr[1] = arr[0] 
+#         temp = arr[1]
+#         return arr
+#     end
     
    
-}
-end
-  bubble_sort_by([5,6,3,8,9,5,8])
+# }
+# end
+ 
