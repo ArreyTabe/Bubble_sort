@@ -1,5 +1,3 @@
-
-
 def bubble_sort_by(arr)
   n = arr.size
   return unless n > 1
