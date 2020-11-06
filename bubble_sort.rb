@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 def bubble_sort_by(arr)
   n = arr.size
